@@ -53,8 +53,8 @@ func main() {
 	}
 	defer ch.Close()
 
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 1000; i++ {
 		Publish(ch, GenerateOrder())
-		time.Sleep(300 * time.Millisecond)
+		time.Sleep(50 * time.Millisecond)
 	}
 }

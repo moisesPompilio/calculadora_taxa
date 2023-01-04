@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: estudogo
+spec:
+  selector:
+    matchLabels:
+      app: estudogo
+  template:
+    metadata:
+      labels:
+        app: estudogo
+    spec:
+      containers:
+      - name: estudogo
+        image: moisespompilio/estudogo:latest
+        ports:
+        - containerPort: 8080
